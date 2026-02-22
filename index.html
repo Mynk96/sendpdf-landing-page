@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SendPDF — Generate and Send Dynamic PDFs via API</title>
+  <meta name="description" content="Developer-first document automation. Create templates, inject JSON, deliver PDFs — without managing rendering or email infrastructure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-shapes" aria-hidden="true"></div>
+
+  <header class="header header-glass">
+    <div class="container header-inner">
+      <a href="#" class="logo">SendPDF</a>
+      <nav class="nav">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#templates">Templates</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#early-access">Early Access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge">Launching Soon — Early Access Now Open</span>
+          <h1 class="hero-title">Generate and Send Dynamic PDFs with a Simple API</h1>
+          <p class="hero-sub">
+            Create reusable templates, customize them with drag-and-drop editing, inject JSON data, and deliver PDFs instantly — without managing PDF rendering or email infrastructure.
+          </p>
+          <div class="hero-ctas">
+            <a href="#early-access" class="btn btn-primary btn-glow">Join Early Access</a>
+            <a href="#api-preview" class="btn btn-secondary">View API Preview</a>
+          </div>
+          <p class="hero-note">Be among the first to use SendPDF. Limited early access.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-floating-doc hero-float-a" aria-hidden="true">
+            <div class="hero-doc-bar"></div>
+            <div class="hero-doc-line"></div>
+            <div class="hero-doc-line short"></div>
+          </div>
+          <div class="hero-code-wrap hero-code-float">
+          <div class="hero-code-header">
+            <span class="hero-code-dot"></span>
+            <span class="hero-code-dot"></span>
+            <span class="hero-code-dot"></span>
+            <span class="hero-code-tab">REST</span>
+          </div>
+          <div class="hero-code">
+            <pre><code><span class="code-method">POST</span> /v1/documents/generate
+
+{
+  <span class="code-key">"template_id"</span>: <span class="code-string">"invoice"</span>,
+  <span class="code-key">"data"</span>: {
+    <span class="code-key">"customer_name"</span>: <span class="code-string">"John"</span>,
+    <span class="code-key">"invoice_amount"</span>: <span class="code-string">"$250"</span>
+  }
+}</code></pre>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Product Overview -->
+    <section class="section section-light" id="overview">
+      <div class="container">
+        <h2 class="section-title reveal">Everything You Need to Automate PDF Workflows</h2>
+        <p class="section-sub reveal">One API for templates, rendering, and delivery. No servers to run, no queues to manage — just send JSON and get PDFs in your users’ inboxes or behind signed URLs.</p>
+        <div class="overview-cards">
+          <article class="overview-card reveal">
+            <div class="overview-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h8M8 15h4"/></svg>
+            </div>
+            <h3 class="overview-card-title">Template Library</h3>
+            <p class="overview-card-text">Pro Customizable Templates for invoices, reports & more</p>
+          </article>
+          <article class="overview-card reveal">
+            <div class="overview-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="overview-card-title">Template Creation</h3>
+            <p class="overview-card-text">HTML-based templates with dynamic variables</p>
+          </article>
+          <article class="overview-card reveal">
+            <div class="overview-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="overview-card-title">Simple API</h3>
+            <p class="overview-card-text">JSON in, PDF out</p>
+          </article>
+          <article class="overview-card reveal">
+            <div class="overview-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="overview-card-title">Built-in Delivery</h3>
+            <p class="overview-card-text">Send via email or secure download links</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="section section-alt" id="templates">
+      <div class="container">
+        <h2 class="section-title reveal">Professionally Designed Templates. Fully Customizable.</h2>
+        <p class="section-sub reveal">SendPDF includes an extensive library of ready-made templates built for common SaaS workflows. Customize layouts, edit content, adjust branding, and insert dynamic variables — all using a simple drag-and-drop editor.</p>
+        <div class="template-previews">
+          <div class="template-preview-card reveal">
+            <div class="template-preview-mock template-mock-invoice">
+              <img src="assets/invoice-template.png" alt="Invoice template preview" class="template-preview-img" width="350" height="500" />
+            </div>
+            <span class="template-preview-label">Invoice</span>
+          </div>
+          <div class="template-preview-card reveal">
+            <div class="template-preview-mock template-mock-certificate">
+              <img src="assets/certificate-template.png" alt="Certificate template preview" class="template-preview-img" width="280" height="373" />
+            </div>
+            <span class="template-preview-label">Certificate</span>
+          </div>
+          <div class="template-preview-card reveal">
+            <div class="template-preview-mock template-mock-report">
+              <img src="assets/report-template.png" alt="Report template preview" class="template-preview-img" width="280" height="373" />
+            </div>
+            <span class="template-preview-label">Report</span>
+          </div>
+        </div>
+        <ul class="template-features-list reveal">
+          <li>Drag-and-drop editor</li>
+          <li>Dynamic variables like <code>{{ customer_name }}</code></li>
+          <li>Reusable components</li>
+          <li>Multi-page support</li>
+          <li>Brand customization</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. How It Works -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title reveal">From Template to Delivered PDF</h2>
+        <p class="section-sub reveal">A simple pipeline: design your template once, then drive it with data from your app. We handle rendering and delivery.</p>
+        <div class="workflow-diagram reveal">
+          <div class="workflow-node">
+            <span class="workflow-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <span class="workflow-label">Template</span>
+          </div>
+          <span class="workflow-arrow" aria-hidden="true">→</span>
+          <div class="workflow-node">
+            <span class="workflow-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <span class="workflow-label">API</span>
+          </div>
+          <span class="workflow-arrow" aria-hidden="true">→</span>
+          <div class="workflow-node">
+            <span class="workflow-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <span class="workflow-label">PDF</span>
+          </div>
+          <span class="workflow-arrow" aria-hidden="true">→</span>
+          <div class="workflow-node">
+            <span class="workflow-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span class="workflow-label">Delivery</span>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-num">1</span>
+            <h3 class="step-title">Create or Customize a Template</h3>
+            <p class="step-text">Choose from our template library or design your own with drag-and-drop editing and dynamic variables.</p>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step reveal">
+            <span class="step-num">2</span>
+            <h3 class="step-title">Send Data via API</h3>
+            <p class="step-text">POST JSON and get a document ID</p>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step reveal">
+            <span class="step-num">3</span>
+            <h3 class="step-title">PDF Delivered Instantly</h3>
+            <p class="step-text">Email or signed download link</p>
+          </div>
+        </div>
+        <div class="workflow-mockups reveal">
+          <div class="mockup-editor" aria-hidden="true">
+            <div class="mockup-bar"></div>
+            <div class="mockup-line"></div>
+            <div class="mockup-line short"></div>
+            <div class="mockup-line"></div>
+            <span class="mockup-var">{{ customer_name }}</span>
+          </div>
+          <div class="mockup-doc" aria-hidden="true">
+            <div class="mockup-doc-header"></div>
+            <div class="mockup-doc-line"></div>
+            <div class="mockup-doc-line short"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Built for Developers -->
+    <section class="section section-light" id="api-preview">
+      <div class="container dev-section">
+        <div class="dev-content reveal">
+          <h2 class="section-title">Developer-First by Design</h2>
+          <p class="section-sub">RESTful API, webhooks for async events, and SDKs that fit into your stack. Built for developers who want PDFs without the plumbing.</p>
+          <ul class="dev-features">
+            <li>REST API</li>
+            <li>Async processing</li>
+            <li>Webhooks</li>
+            <li>Secure API keys</li>
+            <li>Signed download URLs</li>
+            <li>Fast rendering (&lt;3s typical)</li>
+          </ul>
+        </div>
+        <div class="dev-code-wrap reveal">
+          <div class="code-block code-block-glow">
+            <pre><code><span class="code-prompt">$</span> curl -X POST https://api.sendpdf.io/v1/documents/generate \
+  -H <span class="code-string">"Authorization: Bearer sk_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{"template_id":"invoice","data":{...}}'</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Built for Teams -->
+    <section class="section section-alt" id="teams">
+      <div class="container">
+        <h2 class="section-title reveal">Simple for Product Teams</h2>
+        <p class="section-sub reveal">Non-developers can own templates and branding; engineers integrate once. Everyone gets visibility and control without custom tooling.</p>
+        <div class="teams-grid">
+          <div class="teams-card reveal">
+            <span class="teams-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </span>
+            Reusable templates
+          </div>
+          <div class="teams-card reveal">
+            <span class="teams-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            </span>
+            Branded PDF delivery
+          </div>
+          <div class="teams-card reveal">
+            <span class="teams-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+            </span>
+            Usage dashboard
+          </div>
+          <div class="teams-card reveal">
+            <span class="teams-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            Secure storage
+          </div>
+          <div class="teams-card reveal">
+            <span class="teams-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            Transparent pricing
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Use Cases -->
+    <section class="section section-light" id="use-cases">
+      <div class="container">
+        <h2 class="section-title reveal">Powering Modern SaaS Workflows</h2>
+        <p class="section-sub reveal">From post-payment invoices to client reports and compliance documents — automate the PDFs your product already needs.</p>
+        <div class="use-cases-grid">
+          <a href="#early-access" class="use-case-card reveal">
+            <span class="use-case-icon">📄</span>
+            <span class="use-case-label">Invoice Automation</span>
+          </a>
+          <a href="#early-access" class="use-case-card reveal">
+            <span class="use-case-icon">📊</span>
+            <span class="use-case-label">Client Reports</span>
+          </a>
+          <a href="#early-access" class="use-case-card reveal">
+            <span class="use-case-icon">🎓</span>
+            <span class="use-case-label">Certificates</span>
+          </a>
+          <a href="#early-access" class="use-case-card reveal">
+            <span class="use-case-icon">📝</span>
+            <span class="use-case-label">Contracts</span>
+          </a>
+          <a href="#early-access" class="use-case-card reveal">
+            <span class="use-case-icon">💳</span>
+            <span class="use-case-label">Account Statements</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="section section-light" id="integrations">
+      <div class="container">
+        <h2 class="section-title reveal">Works Seamlessly With Your Stack</h2>
+        <p class="section-sub reveal">SDKs and REST from day one. Trigger PDFs from Stripe webhooks, background jobs, or any serverless function.</p>
+        <div class="integrations-grid">
+          <div class="integration-card reveal">
+            <span class="integration-icon">Node.js</span>
+            <p class="integration-desc">Official SDK for JavaScript and TypeScript</p>
+          </div>
+          <div class="integration-card reveal">
+            <span class="integration-icon">Python</span>
+            <p class="integration-desc">Python client for scripts and backends</p>
+          </div>
+          <div class="integration-card reveal">
+            <span class="integration-icon">Ruby</span>
+            <p class="integration-desc">Gem for Rails and Ruby apps</p>
+          </div>
+          <div class="integration-card reveal">
+            <span class="integration-icon">REST</span>
+            <p class="integration-desc">Full REST API from any language</p>
+          </div>
+          <div class="integration-card reveal">
+            <span class="integration-icon">Stripe</span>
+            <p class="integration-desc">Trigger PDFs after payment events</p>
+          </div>
+          <div class="integration-card reveal">
+            <span class="integration-icon">Webhooks</span>
+            <p class="integration-desc">Real-time events when documents are ready</p>
+          </div>
+        </div>
+        <div class="stripe-workflow reveal">
+          <p class="stripe-workflow-title">Example: Invoice after payment</p>
+          <div class="stripe-workflow-steps">
+            <span class="sw-step">Stripe Payment</span>
+            <span class="sw-arrow">→</span>
+            <span class="sw-step">SendPDF</span>
+            <span class="sw-arrow">→</span>
+            <span class="sw-step">Invoice Generated</span>
+            <span class="sw-arrow">→</span>
+            <span class="sw-step">Email Delivered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Under the Hood -->
+    <section class="section section-alt" id="under-the-hood">
+      <div class="container">
+        <h2 class="section-title reveal">Under the Hood</h2>
+        <p class="section-sub reveal">Built for reliability and scale. Async processing and secure defaults so you can ship with confidence.</p>
+        <ul class="hood-list reveal">
+          <li>Async queue-based processing</li>
+          <li>Scalable worker architecture</li>
+          <li>Secure signed URLs for downloads</li>
+          <li>Rate-limited API access</li>
+          <li>Temporary file storage with expiry</li>
+          <li>JSON-based template injection</li>
+          <li>API-driven workflows</li>
+          <li>Automatically Handle spikes and retries</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. Early Access (Main CTA) -->
+    <section class="section early-access-section" id="early-access">
+      <div class="container narrow">
+        <h2 class="section-title section-title-light reveal">Join Early Access</h2>
+        <p class="section-text section-text-light reveal">
+          We're inviting a small group of early users ahead of public launch.
+        </p>
+        <p class="early-access-spots reveal">Limited Early Access Spots</p>
+        <div class="form-card form-card-elevated form-card-glow">
+          <div id="form-success" class="form-success hidden">
+            <p class="form-success-title">You're on the list. We'll reach out soon with early access details.</p>
+          </div>
+          <form id="early-access-form" class="early-access-form" action="https://formspree.io/f/xkovqkbe" method="POST" data-recaptcha-sitekey="6Lds-nMsAAAAAE9KFbwuwtaj7vjvNf4gfrWSc2VL">
+            <!-- Honeypot: hidden from users; bots that fill it get rejected (Formspree + client check). -->
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Jane Doe" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="jane@company.com" />
+            </div>
+            <div class="form-group">
+              <label for="building">What are you building?</label>
+              <select id="building" name="building">
+                <option value="">Select one</option>
+                <option value="saas">SaaS product</option>
+                <option value="agency">Agency tool</option>
+                <option value="internal">Internal system</option>
+                <option value="fintech">Fintech</option>
+                <option value="hr">HR / Payroll</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="volume">How many PDFs do you expect per month?</label>
+              <select id="volume" name="volume">
+                <option value="">Select one</option>
+                <option value="under-500">&lt; 500</option>
+                <option value="500-1000">500 – 1,000</option>
+                <option value="1000-5000">1,000 – 5,000</option>
+                <option value="5000-plus">5,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="use-case">How would you use SendPDF?</label>
+              <textarea id="use-case" name="use_case" rows="3" placeholder="e.g. Invoices after payments, client reports..."></textarea>
+            </div>
+            <div class="form-group form-group-checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" id="updates" name="updates" />
+                <span>I'd like early access and product updates.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-glow btn-full">Request Early Access</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-light" id="pricing">
+      <div class="container">
+        <h2 class="section-title reveal">Simple, Usage-Based Pricing</h2>
+        <p class="section-sub reveal">Start free. Upgrade when you're ready for production.</p>
+        <div class="pricing-grid">
+          <article class="pricing-card pricing-card-free reveal">
+            <h3 class="pricing-plan-name">Free</h3>
+            <p class="pricing-plan-desc">Perfect for testing SendPDF and building your integration.</p>
+            <div class="pricing-price-block">
+              <span class="pricing-price-free">Free — No credit card required</span>
+            </div>
+            <ul class="pricing-features">
+              <li>100 PDFs per month</li>
+              <li>Full template library access</li>
+              <li>Drag-and-drop template customization</li>
+              <li>API access</li>
+              <li>Email delivery</li>
+              <li>Secure signed download links</li>
+              <li>7-day file retention</li>
+              <li>Watermarked PDFs</li>
+            </ul>
+            <a href="#early-access" class="btn btn-primary btn-full pricing-cta">Join Early Access</a>
+          </article>
+
+          <article class="pricing-card pricing-card-highlight reveal">
+            <span class="pricing-badge">Most popular</span>
+            <h3 class="pricing-plan-name">Growth</h3>
+            <p class="pricing-plan-desc">For production workloads and growing SaaS products.</p>
+            <div class="pricing-price-block">
+              <span class="pricing-price-gated pricing-price-accent">Early Access Discount — Unlock Launch Pricing</span>
+            </div>
+            <ul class="pricing-features">
+              <li>2,000 PDFs per month</li>
+              <li>No watermark</li>
+              <li>Webhook support</li>
+              <li>Priority processing</li>
+              <li>Extended file retention</li>
+              <li>Delivery logs</li>
+              <li>Full template library access</li>
+            </ul>
+            <a href="#early-access" class="btn btn-primary btn-glow btn-full pricing-cta" data-pricing-modal>Join Early Access</a>
+          </article>
+
+          <article class="pricing-card reveal">
+            <h3 class="pricing-plan-name">Pro</h3>
+            <p class="pricing-plan-desc">For high-volume platforms.</p>
+            <div class="pricing-price-block">
+              <span class="pricing-price-gated">Custom Pricing — Join Early Access for Details</span>
+            </div>
+            <ul class="pricing-features">
+              <li>10,000+ PDFs per month</li>
+              <li>Dedicated queue priority</li>
+              <li>Extended retention</li>
+              <li>Advanced API controls</li>
+              <li>SLA support</li>
+            </ul>
+            <a href="#early-access" class="btn btn-primary btn-full pricing-cta" data-pricing-modal>Join Early Access</a>
+          </article>
+        </div>
+        <p class="pricing-gate-note reveal">Full pricing details for Growth and Pro will be shared with early access users before public launch.</p>
+      </div>
+    </section>
+
+    <!-- Pricing modal -->
+    <div id="pricing-modal" class="pricing-modal" aria-hidden="true" role="dialog" aria-labelledby="pricing-modal-title">
+      <div class="pricing-modal-backdrop" data-pricing-modal-close></div>
+      <div class="pricing-modal-content">
+        <button type="button" class="pricing-modal-close" data-pricing-modal-close aria-label="Close">&times;</button>
+        <h2 id="pricing-modal-title" class="pricing-modal-title">Join early access to unlock launch pricing.</h2>
+        <p class="pricing-modal-text">We’ll share full pricing and early access discounts with you before we launch publicly.</p>
+        <a href="#early-access" class="btn btn-primary btn-glow">Join Early Access</a>
+      </div>
+    </div>
+
+    <!-- 9. Final CTA -->
+    <section class="section section-cta section-cta-gradient">
+      <div class="container narrow text-center">
+        <h2 class="section-title reveal">Stop Managing PDF Infrastructure</h2>
+        <p class="section-text reveal">
+          Focus on your product. Let SendPDF handle document generation.
+        </p>
+        <a href="#early-access" class="btn btn-primary btn-glow reveal">Join Early Access</a>
+      </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <nav class="footer-nav">
+          <a href="#">Docs <span class="coming-soon">(coming soon)</span></a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="#" class="footer-icon" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-icon" aria-label="GitHub">GitHub</a>
+        </div>
+        <p class="footer-copy">© 2026 SendPDF. Built for modern developers.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Load reCAPTCHA v3 once with the form's site key so the key is bound before first submit. -->
+  <script>
+  (function () {
+    var form = document.getElementById('early-access-form');
+    if (!form) return;
+    var key = form.getAttribute('data-recaptcha-sitekey');
+    if (!key || key === 'YOUR_RECAPTCHA_V3_SITE_KEY') return;
+    var s = document.createElement('script');
+    s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(key);
+    s.async = true;
+    document.head.appendChild(s);
+  })();
+  </script>
+  <script src="script.js"></script>
+  <!-- reCAPTCHA v3: replace YOUR_RECAPTCHA_V3_SITE_KEY in the form's data-recaptcha-sitekey with your key from Google reCAPTCHA admin (use same key in Formspree form settings as secret). -->
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "sendpdf-landing",
+  "private": true,
+  "scripts": {
+    "preview": "serve -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
