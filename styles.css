@@ -1169,10 +1169,22 @@ body {
 
 .integration-icon {
   display: block;
+  margin-bottom: 10px;
+}
+
+.integration-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.integration-name {
+  display: block;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .integration-desc {
