@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="40" y="40" width="120" height="80" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+  <rect x="260" y="40" width="120" height="80" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+  <rect x="480" y="40" width="120" height="80" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+  <line x1="160" y1="80" x2="250" y2="80" stroke="#6366f1" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="380" y1="80" x2="470" y2="80" stroke="#6366f1" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="320" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#64748b">Diagram placeholder</text>
+</svg>

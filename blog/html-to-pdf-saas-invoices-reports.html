@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML to PDF for SaaS (Invoices, Reports &amp; Scaling)</title>
+  <meta name="description" content="Learn how SaaS platforms generate invoices, reports, and certificates at scale using HTML to PDF systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+</head>
+<body class="blog-page">
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-shapes" aria-hidden="true"></div>
+
+  <header class="header header-glass">
+    <div class="container header-inner">
+      <a href="../" class="logo">SendPDF</a>
+      <nav class="nav">
+        <a href="../#how-it-works">How It Works</a>
+        <a href="../#templates">Templates</a>
+        <a href="../#pricing">Pricing</a>
+        <a href="../#integrations">Integrations</a>
+        <a href="index.html">Blog</a>
+        <a href="../#early-access">Early Access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-article-wrap">
+    <div class="container container--blog">
+      <article class="blog-article">
+        <h1 class="blog-article-title">HTML to PDF for SaaS: Invoices, Reports &amp; Multi-Tenant Scaling</h1>
+
+        <div class="blog-article-body">
+          <figure class="blog-hero-img">
+            <img src="../assets/blog-saas-invoices-reports-hero.png" alt="HTML to PDF for SaaS: invoices, reports, multi-tenant scaling" width="560" height="360" />
+          </figure>
+          <h2>Introduction</h2>
+          <p>For SaaS companies, PDF generation is rarely the core product. Yet it powers critical workflows:</p>
+          <ul>
+            <li>Invoices</li>
+            <li>Billing statements</li>
+            <li>Analytics reports</li>
+            <li>Contracts</li>
+            <li>Certificates</li>
+          </ul>
+          <p>At small scale, rendering PDFs seems trivial. At SaaS scale, it becomes a multi-tenant reliability challenge.</p>
+
+          <h2>The Multi-Tenant Problem</h2>
+          <p>In SaaS systems: thousands of customers generate documents; usage patterns vary; some tenants run bulk exports; others generate occasional invoices.</p>
+          <p>Without isolation, heavy users can monopolize rendering capacity. A well-designed <a href="pdf-generation-architecture-at-scale.html">scalable PDF generation pipeline</a> includes per-tenant controls so one customer cannot degrade the experience for others.</p>
+
+          <h2>Rate Limiting &amp; Fair Scheduling</h2>
+          <p>Protect your system by implementing:</p>
+          <ul>
+            <li>Per-tenant rate limits</li>
+            <li>Priority queues</li>
+            <li>Job size caps</li>
+          </ul>
+          <p>Fair scheduling ensures one customer cannot degrade experience for others. This aligns with robust <a href="queueing-retries-pdf-generation.html">queueing and retry strategies</a> for PDF generation at scale.</p>
+
+          <h2>Handling Billing Spikes</h2>
+          <p>Invoice generation often spikes: end of month, subscription renewals, tax reporting periods.</p>
+          <p>These predictable spikes require:</p>
+          <ul>
+            <li>Auto-scaling workers</li>
+            <li>Queue buffering</li>
+            <li>Capacity planning</li>
+          </ul>
+          <p>Anticipate load, don't react to it.</p>
+
+          <h2>Document Consistency &amp; Branding</h2>
+          <p>SaaS PDFs often include custom logos, branded layouts, dynamic data, and localization.</p>
+          <p>Ensure templates are version-controlled and rendering environments support required fonts and assets. Consistency builds trust. For common pitfalls in layout and fonts, see our guide on <a href="fix-html-to-pdf-styling-issues.html">HTML to PDF styling issues</a> and <a href="font-pagination-layout-breaks-pdf.html">font and pagination breaks</a>.</p>
+
+          <h2>Security &amp; Compliance</h2>
+          <p>Invoices and contracts contain sensitive data. Your PDF system must:</p>
+          <ul>
+            <li>Encrypt storage</li>
+            <li>Restrict access</li>
+            <li>Log generation events</li>
+            <li>Prevent unauthorized rendering</li>
+          </ul>
+          <p>Security is not optional.</p>
+
+          <h2>Build vs API for SaaS</h2>
+          <p>For many SaaS companies, PDF generation is supporting infrastructure. Using a managed API reduces DevOps burden, browser maintenance, and scaling complexity. It allows teams to focus on core product features. For a deeper comparison, see <a href="build-vs-buy-pdf-api.html">Build vs Buy: PDF API or in-house</a>.</p>
+
+          <h2>Final Thoughts</h2>
+          <p>In SaaS environments, PDF generation must be reliable, fair across tenants, secure, and scalable. It is not just about rendering — it is about customer experience.</p>
+        </div>
+
+        <div class="blog-cta-box">
+          <p>Ready to simplify PDF generation for your SaaS?</p>
+          <a href="../#early-access" class="btn btn-primary btn-glow">Join Early Access</a>
+        </div>
+      </article>
+    </div>
+    <section class="blog-related-wrap" aria-labelledby="related-heading">
+      <div class="container">
+        <h2 id="related-heading" class="blog-related-title">Related articles</h2>
+        <div class="blog-related-carousel">
+          <div class="blog-related-card">
+            <a href="pdf-generation-architecture-at-scale.html">
+              <div class="blog-related-card-img"><img src="../assets/blog-architecture-at-scale-hero.png" alt="" width="280" height="180" loading="lazy" /></div>
+              <p class="blog-related-card-title">Scaling HTML to PDF: Architecture &amp; Queues</p>
+            </a>
+          </div>
+          <div class="blog-related-card">
+            <a href="queueing-retries-pdf-generation.html">
+              <div class="blog-related-card-img"><img src="../assets/blog-queueing-retries-hero.png" alt="" width="280" height="180" loading="lazy" /></div>
+              <p class="blog-related-card-title">Queueing and Retries in PDF Generation</p>
+            </a>
+          </div>
+          <div class="blog-related-card">
+            <a href="build-vs-buy-pdf-api.html">
+              <div class="blog-related-card-img"><img src="../assets/blog-build-vs-buy-hero.png" alt="" width="280" height="180" loading="lazy" /></div>
+              <p class="blog-related-card-title">Build vs Buy: PDF API or In-House?</p>
+            </a>
+          </div>
+          <div class="blog-related-card">
+            <a href="fix-html-to-pdf-styling-issues.html">
+              <div class="blog-related-card-img"><img src="../assets/blog-styling-issues-hero.png" alt="" width="280" height="180" loading="lazy" /></div>
+              <p class="blog-related-card-title">Fix HTML to PDF Styling Issues</p>
+            </a>
+          </div>
+          <div class="blog-related-card">
+            <a href="font-pagination-layout-breaks-pdf.html">
+              <div class="blog-related-card-img"><img src="../assets/blog-font-pagination-hero.png" alt="" width="280" height="180" loading="lazy" /></div>
+              <p class="blog-related-card-title">Font, Pagination &amp; Layout Breaks</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="../#">Docs <span class="coming-soon">(coming soon)</span></a>
+        <a href="../#">Privacy</a>
+        <a href="../#">Terms</a>
+        <a href="../#">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="../#" class="footer-icon" aria-label="Twitter">𝕏</a>
+        <a href="../#" class="footer-icon" aria-label="GitHub">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 SendPDF. Built for modern developers.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
